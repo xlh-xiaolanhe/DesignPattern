@@ -12,6 +12,9 @@
         <module>demo-log</module>
         <module>adapter</module>
         <module>adapter-01</module>
+        <module>decorator</module>
+        <module>decorator-01</module>
+        <module>decorator-02</module>
     </modules>
 
     <properties>
