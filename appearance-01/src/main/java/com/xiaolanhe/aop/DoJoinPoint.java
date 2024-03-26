@@ -85,7 +85,10 @@ public class DoJoinPoint {
       * @param jp
      * @return java.lang.reflect.Method
     */
+
+    // ProceedingJoinPoint 代表着正在被拦截的连接点（Join Point），在方法执行过程中可用于获取方法的信息和执行方法。
     private Method getMethod(ProceedingJoinPoint jp) throws NoSuchMethodException {
+        //从 ProceedingJoinPoint 中获取方法的签名，包括方法的名称、返回类型等信息。
         Signature signature = jp.getSignature();
         MethodSignature methodSignature = (MethodSignature) signature;
         return getClass(jp).getMethod(methodSignature.getName(), methodSignature.getParameterTypes());
